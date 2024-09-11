@@ -1,64 +1,250 @@
-.Home{
-    height: 962px;
+.Home {
+  height: 962px;
 }
 
+.Imagem {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  top: -10%;
+  left: 67.5%;
+}
 
-.Imagem{
-    position: relative;
-    top: -10%;
-    left: 67.5%;
-    
-  } 
+.Imagem img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+}
 
-  .textinho{
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(45px + 2vmin);
-    top: -80%;
-    left: 26.5%;
-    font-family: 'Roboto';
-    line-height: 0.5;
-    
+.textinho {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(45px + 2vmin);
+  top: -80%;
+  left: 26.5%;
+  font-family: 'Roboto';
+  line-height: 0.5;
+}
+
+.button-section {
+  display: flex;
+  position: relative;
+  gap: 50px;
+  top: -70%;
+  left: 27%;
+}
+
+.button {
+  font-size: 1.8vw;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.yellow-button {
+  background-color: #f3cf00;
+  color: #333;
+}
+
+.yellow-button:hover {
+  background-color: #030300;
+  color: #fff;
+}
+
+.blue-button {
+  background-color: #ff7057;
+  color: #333;
+}
+
+.blue-button:hover {
+  background-color: #030300;
+  color: #fff;
+}
+
+@media (max-width: 380px) {
+  .textinho {
+      font-size: calc(25px + 3vmin); /* Ajusta o tamanho da fonte para telas muito pequenas */
+      margin: 10px; /* Adiciona margem ao redor do texto */
+  }
+
+  .button {
+      font-size: 5vw; /* Ajusta o tamanho da fonte dos botões para telas muito pequenas */
+      padding: 8px 15px; /* Ajusta o padding dos botões */
+  }
+}
+
+@media (min-width: 381px) and (max-width: 576px) {
+  .Home {
+    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+  }
+
+  .Imagem {
+    padding: 0 2px; 
+    width: 80%; /* Reduz a largura da imagem */
+  }
+
+  .textinho {
+    font-size: calc(12px + 2.5vmin); 
+    margin: 10px;
+    text-align: center; 
   }
 
   .button-section {
-    display: flex;
-    position: relative;
-    gap: 50px;
-    top: -70%;
-    left: 27%;
+    flex-direction: column; /* Alinha os botões verticalmente */
+    gap: 15px; /* Reduz o espaçamento entre os botões */
+    padding: 5px; /* Adiciona um pouco de espaço interno */
   }
-  
+
   .button {
-    font-size: 1.8vw;
-    padding: 10px 30px;
-    border-radius: 20px;
-    border: none;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
+    font-size: 6vw; /* Ajusta o tamanho da fonte dos botões */
+    padding: 6px 12px; /* Ajusta o padding dos botões */
   }
-  
-  .yellow-button {
-    background-color: #f3cf00;
-    color: #333;
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .Home {
+    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
   }
-  
-  .yellow-button:hover {
-    background-color: #030300;
-    color: #fff;
+
+  .Imagem {
+    padding: 0 6px; 
+    width: 70%; /* Ajusta a largura da imagem */
   }
-  
-  .blue-button {
-    background-color: #ff7057;
-    color: #333;
+
+  .textinho {
+    font-size: calc(10px + 1.8vmin); 
+    margin: 6px;
+    text-align: center; 
   }
-  
-  .blue-button:hover {
-    background-color: #030300;
-    color: #fff;
+
+  .button-section {
+    flex-direction: column; /* Alinha os botões verticalmente */
+    gap: 18px; /* Reduz o espaçamento entre os botões */
+    padding: 10px; /* Adiciona um pouco de espaço interno */
   }
+
+  .button {
+    font-size: 5vw; /* Ajusta o tamanho da fonte dos botões */
+    padding: 8px 8px; /* Ajusta o padding dos botões */
+    width: 20%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .Home {
+    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+  }
+
+  .Imagem {
+    padding: 0 20px; 
+    width: 100%; /* Ajusta a largura da imagem */
+  }
+
+  .textinho {
+    font-size: calc(20px + 2vmin); 
+    margin: 20px;
+    text-align: center; 
+  }
+
+  .button-section {
+    flex-direction: row; /* Alinha os botões horizontalmente */
+    gap: 30px; /* Ajusta o espaçamento entre os botões */
+    padding: 15px; /* Adiciona um pouco de espaço interno */
+  }
+
+  .button {
+    font-size: 4vw; /* Ajusta o tamanho da fonte dos botões */
+    padding: 10px 25px; /* Ajusta o padding dos botões */
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .Home {
+    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+  }
+
+  .Imagem {
+    padding: 0 30px; 
+    width: 100%; /* Ajusta a largura da imagem */
+  }
+
+  .textinho {
+    font-size: calc(25px + 2vmin); 
+    margin: 20px;
+    text-align: center; 
+  }
+
+  .button-section {
+    flex-direction: row; /* Alinha os botões horizontalmente */
+    gap: 40px; /* Ajusta o espaçamento entre os botões */
+    padding: 20px; /* Adiciona um pouco de espaço interno */
+  }
+
+  .button {
+    font-size: 3vw; /* Ajusta o tamanho da fonte dos botões */
+    padding: 12px 30px; /* Ajusta o padding dos botões */
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .Home {
+    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+  }
+
+  .Imagem {
+    padding: 0 40px; 
+    width: 100%; /* Ajusta a largura da imagem */
+  }
+
+  .textinho {
+    font-size: calc(30px + 2vmin); 
+    margin: 20px;
+    text-align: center; 
+  }
+
+  .button-section {
+    flex-direction: row; /* Alinha os botões horizontalmente */
+    gap: 50px; /* Ajusta o espaçamento entre os botões */
+    padding: 25px; /* Adiciona um pouco de espaço interno */
+  }
+
+  .button {
+    font-size: 2.5vw; /* Ajusta o tamanho da fonte dos botões */
+    padding: 15px 35px; /* Ajusta o padding dos botões */
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1600px) {
+  .Home {
+    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+  }
+
+  .Imagem {
+    padding: 0 20px; 
+    width: 95%; /* Ajusta a largura da imagem */
+  }
+
+  .textinho {
+    font-size: calc(30px + 2vmin); 
+    margin: 20px;
+    text-align: center; 
+  }
+
+  .button-section {
+    flex-direction: row; /* Alinha os botões horizontalmente */
+    gap: 60px; /* Ajusta o espaçamento entre os botões */
+    padding: 30px; /* Adiciona um pouco de espaço interno */
+  }
+
+  .button {
+    font-size: 2vw; /* Ajusta o tamanho da fonte dos botões */
+    padding: 18px 40px; /* Ajusta o padding dos botões */
+  }
+}

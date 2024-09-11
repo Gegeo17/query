@@ -1,41 +1,97 @@
+/* Estilos gerais para a navbar */
 .navbar {
-    background-color: orange;
-    display: flex;
-    align-items: center;
-    height: 60px;
-    padding: 0 20px;
-    position: relative;
-    z-index: 2;
-    margin-bottom: 205px;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
-    
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 205px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-item {
+  margin-right: 30px;
+  font-size: 1.5em; /* Usando em para uma unidade flexível em relação ao tamanho da fonte */
+  position: relative;
+  font-weight: bold; /* Corrigido de font-style: bold para font-weight: bold */
+}
+
+.nav-link {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 30px;
+  transition: 0.1s;
+}
+
+.nav-link:hover {
+  background-color: #141414;
+  color: #fff;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+  .navbar {
+      height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+      padding: 0 10px; /* Reduz o padding lateral */
+      margin-bottom: 150px; /* Ajusta o espaçamento inferior */
   }
-  
+
   .navbar-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+      flex-direction: column; /* Alinha os itens da navbar verticalmente */
+      align-items: center; /* Centraliza os itens */
+      width: 100%; /* Garante que a navbar ocupe toda a largura do contêiner */
   }
-  
+
   .nav-item {
-    margin-right: 30px;
-    font-size: 25px;
-    position: relative;
-    font-style: bold;
-    left: 930px;
+      margin-right: 0; /* Remove a margem direita */
+      margin-bottom: 15px; /* Adiciona margem inferior entre os itens */
+      font-size: 1.2em; /* Ajusta o tamanho da fonte */
   }
-  
+
   .nav-link {
-    color: #000000;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 30px;
-    transition: 0.1s;
+      padding: 8px 15px; /* Ajusta o padding */
   }
-  
-  .nav-link:hover {
-    background-color: #141414;
-    color: #fff;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      margin-bottom: 100px; /* Ajusta o espaçamento inferior */
   }
+
+  .nav-item {
+      font-size: 1em; /* Ajusta o tamanho da fonte para telas muito pequenas */
+      margin-bottom: 10px; /* Reduz a margem inferior entre os itens */
+  }
+
+  .nav-link {
+      padding: 6px 10px; /* Ajusta o padding para telas muito pequenas */
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar {
+      padding: 0 5px; /* Reduz o padding lateral */
+      margin-bottom: 80px; /* Ajusta o espaçamento inferior */
+  }
+
+  .nav-item {
+      font-size: 0.9em; /* Ajusta o tamanho da fonte para telas muito pequenas */
+      margin-bottom: 8px; /* Reduz a margem inferior entre os itens */
+  }
+
+  .nav-link {
+      padding: 4px 8px; /* Ajusta o padding para telas muito pequenas */
+  }
+}

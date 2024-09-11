@@ -6,52 +6,53 @@ body {
 }
 
 .form-cadastro {
-    width: 450px;
-    padding: 50px;
+    width: 90%; /* Ajusta a largura para telas menores */
+    max-width: 450px; /* Define uma largura máxima */
+    padding: 2.5rem; /* Ajusta o padding usando rem */
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    margin: 50px auto;
+    border-radius: 1rem; /* Ajusta o raio da borda usando rem */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    margin: 2.5rem auto; /* Ajusta a margem usando rem */
     position: relative;
     z-index: 1;
     animation: fadeIn 0.7s ease-in-out;
 }
 
 .titulo-cadastro {
-    font-size: 30px;
+    font-size: 1.875rem; /* Ajusta o tamanho da fonte usando rem */
     text-align: center;
     color: #444;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem; /* Ajusta a margem inferior usando rem */
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem; /* Ajusta o espaçamento das letras usando rem */
 }
 
 .form-item {
-    width: calc(100% - 20px);
-    padding: 15px;
-    margin-bottom: 20px;
+    width: calc(100% - 1.25rem); /* Ajusta a largura para considerar o padding */
+    padding: 1rem; /* Ajusta o padding usando rem */
+    margin-bottom: 1.25rem; /* Ajusta a margem inferior usando rem */
     border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 0.625rem; /* Ajusta o raio da borda usando rem */
+    font-size: 1rem; /* Ajusta o tamanho da fonte usando rem */
     background-color: #f9f9f9;
     transition: all 0.3s ease;
 }
 
 .form-item:focus {
     border-color: #74ebd5;
-    box-shadow: 0 0 10px rgba(116, 235, 213, 0.5);
+    box-shadow: 0 0 0.625rem rgba(116, 235, 213, 0.5);
     outline: none;
 }
 
 .form-submit-cadastro {
     width: 100%;
-    padding: 15px;
+    padding: 1rem; /* Ajusta o padding usando rem */
     background-color: #74ebd5;
     color: #fff;
     border: none;
-    border-radius: 10px;
-    font-size: 18px;
+    border-radius: 0.625rem; /* Ajusta o raio da borda usando rem */
+    font-size: 1.125rem; /* Ajusta o tamanho da fonte usando rem */
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -62,20 +63,20 @@ body {
 
 .error-message {
     color: #e2031a;
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte usando rem */
+    margin-top: 0.625rem; /* Ajusta a margem superior usando rem */
 }
 
 .success-message {
     color: #28a745;
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte usando rem */
+    margin-top: 0.625rem; /* Ajusta a margem superior usando rem */
 }
 
-.password-toggle2{
+.password-toggle2 {
     position: absolute;
-    right: 10%;
-    top: 60.6%;
+    right: 5%; /* Ajusta a posição horizontal para telas menores */
+    top: 60%; /* Ajusta a posição vertical */
     cursor: pointer;
 }
 
@@ -87,5 +88,100 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    .form-cadastro {
+        width: 90%; /* Ajusta a largura do formulário */
+        padding: 2rem; /* Reduz o padding */
+        margin: 2rem auto; /* Ajusta a margem */
+    }
+
+    .titulo-cadastro {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+        margin-bottom: 1.5rem; /* Ajusta a margem inferior */
+    }
+
+    .form-item {
+        padding: 0.75rem; /* Reduz o padding */
+        font-size: 0.875rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .form-submit-cadastro {
+        padding: 0.75rem; /* Reduz o padding */
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .error-message, .success-message {
+        font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .password-toggle2 {
+        right: 3%; /* Ajusta a posição horizontal */
+        top: 55%; /* Ajusta a posição vertical */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-cadastro {
+        padding: 1.5rem; /* Reduz o padding */
+        margin: 1.5rem auto; /* Ajusta a margem */
+    }
+
+    .titulo-cadastro {
+        font-size: 1.25rem; /* Ajusta o tamanho da fonte */
+        margin-bottom: 1.25rem; /* Ajusta a margem inferior */
+    }
+
+    .form-item {
+        padding: 0.5rem; /* Reduz o padding */
+        font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .form-submit-cadastro {
+        padding: 0.5rem; /* Reduz o padding */
+        font-size: 0.875rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .error-message, .success-message {
+        font-size: 0.625rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .password-toggle2 {
+        right: 2%; /* Ajusta a posição horizontal */
+        top: 50%; /* Ajusta a posição vertical */
+    }
+}
+
+@media (max-width: 380px) {
+    .form-cadastro {
+        padding: 1rem; /* Reduz o padding */
+        width: 95%; /* Ajusta a largura para garantir que o formulário se ajuste na tela */
+    }
+
+    .titulo-cadastro {
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+        margin-bottom: 1rem; /* Ajusta a margem inferior */
+    }
+
+    .form-item {
+        padding: 0.5rem; /* Reduz o padding */
+        font-size: 0.625rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .form-submit-cadastro {
+        padding: 0.5rem; /* Reduz o padding */
+        font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .error-message, .success-message {
+        font-size: 0.5rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .password-toggle2 {
+        right: 1%; /* Ajusta a posição horizontal */
+        top: 45%; /* Ajusta a posição vertical */
     }
 }
