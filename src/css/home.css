@@ -1,250 +1,203 @@
-.Home {
-  height: 962px;
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.Imagem {
-  position: relative;
-  width: 100%;
-  height: auto;
+.tudoo {
+  height: 100vh;
   display: flex;
-  top: -10%;
-  left: 67.5%;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-.Imagem img {
-  max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
-  height: auto; /* Mantém a proporção da imagem */
-}
-
-.textinho {
+.form-login {
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+  text-align: center;
   position: relative;
-  flex-direction: column;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.form-titulo {
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.Botao-Google {
+  width: 100%;
+  background-color: #4285F4;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.3125rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(45px + 2vmin);
-  top: -80%;
-  left: 26.5%;
-  font-family: 'Roboto';
-  line-height: 0.5;
-}
-
-.button-section {
-  display: flex;
-  position: relative;
-  gap: 50px;
-  top: -70%;
-  left: 27%;
-}
-
-.button {
-  font-size: 1.8vw;
-  padding: 10px 30px;
-  border-radius: 20px;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
   border: none;
-  text-decoration: none;
-  color: black;
   cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
-.yellow-button {
-  background-color: #f3cf00;
-  color: #333;
+.Botao-Google:hover {
+  background-color: #357ae8;
 }
 
-.yellow-button:hover {
-  background-color: #030300;
-  color: #fff;
+.Google-Imagem {
+  width: 1.5rem;
+  margin-right: 0.75rem;
 }
 
-.blue-button {
-  background-color: #ff7057;
-  color: #333;
+.input-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+  width: 82%;
 }
 
-.blue-button:hover {
-  background-color: #030300;
-  color: #fff;
+.input-icon {
+  position: absolute;
+  left: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
 }
 
-@media (max-width: 380px) {
-  .textinho {
-      font-size: calc(25px + 3vmin); /* Ajusta o tamanho da fonte para telas muito pequenas */
-      margin: 10px; /* Adiciona margem ao redor do texto */
-  }
-
-  .button {
-      font-size: 5vw; /* Ajusta o tamanho da fonte dos botões para telas muito pequenas */
-      padding: 8px 15px; /* Ajusta o padding dos botões */
-  }
+.form-username,
+.form-password {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-@media (min-width: 381px) and (max-width: 576px) {
-  .Home {
-    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
-  }
-
-  .Imagem {
-    padding: 0 2px; 
-    width: 80%; /* Reduz a largura da imagem */
-  }
-
-  .textinho {
-    font-size: calc(12px + 2.5vmin); 
-    margin: 10px;
-    text-align: center; 
-  }
-
-  .button-section {
-    flex-direction: column; /* Alinha os botões verticalmente */
-    gap: 15px; /* Reduz o espaçamento entre os botões */
-    padding: 5px; /* Adiciona um pouco de espaço interno */
-  }
-
-  .button {
-    font-size: 6vw; /* Ajusta o tamanho da fonte dos botões */
-    padding: 6px 12px; /* Ajusta o padding dos botões */
-  }
+.form-username:focus,
+.form-password:focus {
+  border-color: #1a237e;
+  outline: none;
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
-  .Home {
-    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
-  }
-
-  .Imagem {
-    padding: 0 6px; 
-    width: 70%; /* Ajusta a largura da imagem */
-  }
-
-  .textinho {
-    font-size: calc(10px + 1.8vmin); 
-    margin: 6px;
-    text-align: center; 
-  }
-
-  .button-section {
-    flex-direction: column; /* Alinha os botões verticalmente */
-    gap: 18px; /* Reduz o espaçamento entre os botões */
-    padding: 10px; /* Adiciona um pouco de espaço interno */
-  }
-
-  .button {
-    font-size: 5vw; /* Ajusta o tamanho da fonte dos botões */
-    padding: 8px 8px; /* Ajusta o padding dos botões */
-    width: 20%;
-  }
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
-  .Home {
-    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
-  }
+.error-message {
+  color: #e2031a;
+  font-size: 1rem;
+  margin-top: -0.625rem;
+  margin-bottom: 1.25rem;
+}
 
-  .Imagem {
-    padding: 0 20px; 
-    width: 100%; /* Ajusta a largura da imagem */
-  }
+.extras {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+}
 
-  .textinho {
-    font-size: calc(20px + 2vmin); 
-    margin: 20px;
-    text-align: center; 
-  }
+.lembre-me {
+  font-size: 1rem;
+}
 
-  .button-section {
-    flex-direction: row; /* Alinha os botões horizontalmente */
-    gap: 30px; /* Ajusta o espaçamento entre os botões */
-    padding: 15px; /* Adiciona um pouco de espaço interno */
-  }
+.esqueceu-senha {
+  font-size: 1rem;
+  color: #1a237e;
+  text-decoration: none;
+}
 
-  .button {
-    font-size: 4vw; /* Ajusta o tamanho da fonte dos botões */
-    padding: 10px 25px; /* Ajusta o padding dos botões */
+.esqueceu-senha:hover {
+  text-decoration: underline;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+  background-color: #3949ab;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
-@media (min-width: 993px) and (max-width: 1200px) {
-  .Home {
-    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+@media (max-width: 540px) {
+  .form-titulo {
+      font-size: 1.5rem;
   }
-
-  .Imagem {
-    padding: 0 30px; 
-    width: 100%; /* Ajusta a largura da imagem */
-  }
-
-  .textinho {
-    font-size: calc(25px + 2vmin); 
-    margin: 20px;
-    text-align: center; 
-  }
-
-  .button-section {
-    flex-direction: row; /* Alinha os botões horizontalmente */
-    gap: 40px; /* Ajusta o espaçamento entre os botões */
-    padding: 20px; /* Adiciona um pouco de espaço interno */
-  }
-
-  .button {
-    font-size: 3vw; /* Ajusta o tamanho da fonte dos botões */
-    padding: 12px 30px; /* Ajusta o padding dos botões */
+  .Botao-Google, .form-submit {
+      font-size: 1rem;
+      padding: 0.5rem;
   }
 }
 
-@media (min-width: 1201px) and (max-width: 1400px) {
-  .Home {
-    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+@media (min-width: 541px) and (max-width: 767px) {
+  .form-titulo {
+      font-size: 1.6rem;
   }
-
-  .Imagem {
-    padding: 0 40px; 
-    width: 100%; /* Ajusta a largura da imagem */
-  }
-
-  .textinho {
-    font-size: calc(30px + 2vmin); 
-    margin: 20px;
-    text-align: center; 
-  }
-
-  .button-section {
-    flex-direction: row; /* Alinha os botões horizontalmente */
-    gap: 50px; /* Ajusta o espaçamento entre os botões */
-    padding: 25px; /* Adiciona um pouco de espaço interno */
-  }
-
-  .button {
-    font-size: 2.5vw; /* Ajusta o tamanho da fonte dos botões */
-    padding: 15px 35px; /* Ajusta o padding dos botões */
+  .Botao-Google, .form-submit {
+      font-size: 1.05rem;
+      padding: 0.6rem;
   }
 }
 
-@media (min-width: 1401px) and (max-width: 1600px) {
-  .Home {
-    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .form-titulo {
+      font-size: 1.7rem;
   }
-
-  .Imagem {
-    padding: 0 20px; 
-    width: 95%; /* Ajusta a largura da imagem */
+  .Botao-Google, .form-submit {
+      font-size: 1.1rem;
+      padding: 0.7rem;
   }
+}
 
-  .textinho {
-    font-size: calc(30px + 2vmin); 
-    margin: 20px;
-    text-align: center; 
+@media (min-width: 1025px) and (max-width: 1540px) {
+  .form-titulo {
+      font-size: 1.75rem;
   }
-
-  .button-section {
-    flex-direction: row; /* Alinha os botões horizontalmente */
-    gap: 60px; /* Ajusta o espaçamento entre os botões */
-    padding: 30px; /* Adiciona um pouco de espaço interno */
+  .Botao-Google, .form-submit {
+      font-size: 1.125rem;
+      padding: 0.75rem;
   }
+}
 
-  .button {
-    font-size: 2vw; /* Ajusta o tamanho da fonte dos botões */
-    padding: 18px 40px; /* Ajusta o padding dos botões */
+@media (min-width: 1541px) {
+  .form-titulo {
+      font-size: 2rem;
+  }
+  .Botao-Google, .form-submit {
+      font-size: 1.2rem;
+      padding: 0.8rem;
   }
 }

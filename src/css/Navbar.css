@@ -9,6 +9,7 @@
   z-index: 2;
   margin-bottom: 205px;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  justify-content: space-between; /* Para separar o logo do menu */
 }
 
 .navbar-nav {
@@ -40,58 +41,139 @@
   color: #fff;
 }
 
-/* Media queries para telas menores */
-@media (max-width: 768px) {
+/* Menu hamburguer (não visível por padrão) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px;
+  transition: all 0.3s;
+}
+
+/* Animação do menu hamburguer */
+.menu-toggle.active div:nth-child(1) {
+  transform: rotate(45deg);
+  background-color: #fff;
+}
+
+.menu-toggle.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active div:nth-child(3) {
+  transform: rotate(-45deg);
+  background-color: #fff;
+}
+
+/* Media Queries para Responsividade */
+
+/* Mobile (320px - 540px) */
+@media (max-width: 540px) {
   .navbar {
-      height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
-      padding: 0 10px; /* Reduz o padding lateral */
-      margin-bottom: 150px; /* Ajusta o espaçamento inferior */
+    justify-content: flex-end; 
   }
 
   .navbar-nav {
-      flex-direction: column; /* Alinha os itens da navbar verticalmente */
-      align-items: center; /* Centraliza os itens */
-      width: 100%; /* Garante que a navbar ocupe toda a largura do contêiner */
+    display: none; /* Oculta o menu por padrão */
+    position: absolute;
+    top: 60px; /* Ajusta a posição do menu dropdown */
+    left: 0; /* Alinha o menu à esquerda */
+    background-color: orange;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
   }
 
-  .nav-item {
-      margin-right: 0; /* Remove a margem direita */
-      margin-bottom: 15px; /* Adiciona margem inferior entre os itens */
-      font-size: 1.2em; /* Ajusta o tamanho da fonte */
+  .navbar-nav.show {
+    display: flex; /* Exibe o menu quando o botão é clicado */
+    gap: 5px;
   }
 
-  .nav-link {
-      padding: 8px 15px; /* Ajusta o padding */
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-      margin-bottom: 100px; /* Ajusta o espaçamento inferior */
-  }
-
-  .nav-item {
-      font-size: 1em; /* Ajusta o tamanho da fonte para telas muito pequenas */
-      margin-bottom: 10px; /* Reduz a margem inferior entre os itens */
-  }
-
-  .nav-link {
-      padding: 6px 10px; /* Ajusta o padding para telas muito pequenas */
+  .menu-toggle {
+    display: flex; /* Exibe o botão de menu */
   }
 }
 
-@media (max-width: 380px) {
+/* Entre 541px e 767px */
+@media (min-width: 541px) and (max-width: 767px) {
   .navbar {
-      padding: 0 5px; /* Reduz o padding lateral */
-      margin-bottom: 80px; /* Ajusta o espaçamento inferior */
+    justify-content: flex-end; 
   }
 
-  .nav-item {
-      font-size: 0.9em; /* Ajusta o tamanho da fonte para telas muito pequenas */
-      margin-bottom: 8px; /* Reduz a margem inferior entre os itens */
+  .navbar-nav {
+    display: none; /* Oculta o menu por padrão */
+    position: absolute;
+    top: 60px; /* Ajusta a posição do menu dropdown */
+    left: 0; /* Alinha o menu à esquerda */
+    background-color: orange;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
   }
 
-  .nav-link {
-      padding: 4px 8px; /* Ajusta o padding para telas muito pequenas */
+  .navbar-nav.show {
+    display: flex; 
+    gap: 5px;
+  }
+
+  .menu-toggle {
+    display: flex; /* Exibe o botão de menu */
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    justify-content: flex-start; /* Alinha a barra à esquerda */
+  }
+
+  .navbar-nav {
+    display: flex; /* Exibe o menu normalmente */
+  }
+
+  .menu-toggle {
+    display: none; /* Oculta o botão de menu */
+  }
+}
+
+/* Desktops (1025px - 1540px) */
+@media (min-width: 1025px) and (max-width: 1540px) {
+  .navbar {
+    justify-content: flex-end; 
+  }
+
+  .navbar-nav {
+    display: flex; /* Exibe o menu normalmente */
+  }
+
+  .menu-toggle {
+    display: none; /* Oculta o botão de menu */
+  }
+}
+
+/* Telas maiores que 1540px */
+@media (min-width: 1541px) {
+  .navbar {
+    justify-content: flex-end; /* Alinha a barra à esquerda */
+  }
+
+  .navbar-nav {
+    display: flex; /* Exibe o menu normalmente */
+  }
+
+  .menu-toggle {
+    display: none; /* Oculta o botão de menu */
   }
 }

@@ -9,21 +9,85 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  
 }
 
+/* Ajuste da Logo */
 .App-logo {
   position: absolute;
-  top: 1%;
-  left: 1%;
+  top: 50%;
+  left: 20px; /* Espaço fixo da borda esquerda */
+  transform: translateY(-50%); /* Centraliza verticalmente */
   z-index: 3;
+  width: 8vw; /* Largura em relação ao viewport */
+  max-width: 100px; /* Largura máxima para evitar que fique muito grande */
+  height: auto; /* Mantém a proporção */
 }
 
-.Imagem{
-  position: relative;
-  top: -60px;
-  left: 68.5%;
-  z-index: 999;
-} 
+/* Media Queries para Responsividade */
 
+/* Mobile (320px - 540px) */
+@media (max-width: 540px) {
+  .App-header {
+    font-size: calc(8px + 3vmin);
+  }
 
+  .App-logo {
+    top: 3%;
+    width: 12vw; /* Ajusta a largura em relação ao viewport */
+    max-width: 50px; /* Largura máxima para dispositivos móveis */
+  }
+}
+
+@media (min-width: 541px) and (max-width: 767px) {
+  .App-header {
+    font-size: calc(8px + 2.5vmin);
+  }
+
+  .App-logo {
+    top: 3%;
+    width: 8%; /* Ajusta a largura em relação ao viewport */
+    height: 5%; /* Ajusta a altura para manter a proporção */
+    max-width: 60px; /* Largura máxima para dispositivos de tamanho intermediário */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .App-header {
+    font-size: calc(9px + 2.5vmin);
+  }
+
+  .App-logo {
+    top: 3%;
+    width: 10vw; /* Ajusta a largura em relação ao viewport */
+    height: 4.8vw;
+    max-width: 75px; /* Largura máxima para tablets */
+  }
+}
+
+/* Desktops (1025px - 1540px) */
+@media (min-width: 1025px) and (max-width: 1540px) {
+  .App-header {
+    font-size: calc(10px + 2vmin);
+  }
+
+  .App-logo {
+    top: 3%;
+    width: 8vw; /* Ajusta a largura em relação ao viewport */
+    height: 3.5vw;
+    max-width: 90px; /* Largura máxima para desktops */
+  }
+}
+
+/* Telas maiores que 1540px */
+@media (min-width: 1541px) {
+  .App-header {
+    font-size: calc(12px + 1.5vmin);
+  }
+
+  .App-logo {
+    top: 3%;
+    height: 2.8vw;
+    width: 6vw; /* Ajusta a largura em relação ao viewport */
+    max-width: 80px; /* Largura máxima para telas grandes */
+  }
+}

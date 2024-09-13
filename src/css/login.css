@@ -10,12 +10,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem; /* Adiciona padding ao redor do contêiner principal */
+    padding: 2rem;
 }
 
 .form-login {
     width: 90%;
-    max-width: 400px; /* Define uma largura máxima para a forma */
+    max-width: 400px;
     background: #fff;
     padding: 2rem;
     border-radius: 0.5rem;
@@ -26,9 +26,9 @@ body {
 }
 
 .form-titulo {
-    font-size: 1.75rem; /* Usa rem para o tamanho da fonte */
+    font-size: 1.75rem;
     color: #333;
-    margin-bottom: 1.5rem; /* Usa rem para a margem inferior */
+    margin-bottom: 1.5rem;
     font-weight: bold;
 }
 
@@ -37,11 +37,11 @@ body {
     background-color: #4285F4;
     color: white;
     padding: 0.75rem;
-    border-radius: 0.3125rem; /* Usa rem para o raio da borda */
+    border-radius: 0.3125rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.125rem; /* Usa rem para o tamanho da fonte */
+    font-size: 1.125rem;
     margin-bottom: 1.5rem;
     border: none;
     cursor: pointer;
@@ -53,19 +53,19 @@ body {
 }
 
 .Google-Imagem {
-    width: 1.5rem; /* Usa rem para o tamanho da imagem */
-    margin-right: 0.75rem; /* Usa rem para a margem direita */
+    width: 1.5rem;
+    margin-right: 0.75rem;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 1.25rem; /* Usa rem para a margem inferior */
-    width: 100%; /* Usa % para a largura */
+    margin-bottom: 1.25rem;
+    width: 100%;
 }
 
 .input-icon {
     position: absolute;
-    left: 0.625rem; /* Usa rem para o posicionamento */
+    left: 0.625rem;
     top: 50%;
     transform: translateY(-50%);
     color: #888;
@@ -76,8 +76,8 @@ body {
     width: 100%;
     padding: 0.75rem 1.5rem;
     border: 1px solid #ccc;
-    border-radius: 0.3125rem; /* Usa rem para o raio da borda */
-    font-size: 1rem; /* Usa rem para o tamanho da fonte */
+    border-radius: 0.3125rem;
+    font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
@@ -89,7 +89,7 @@ body {
 
 .password-toggle {
     position: absolute;
-    right: 1rem; /* Usa rem para o posicionamento */
+    right: 1rem;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -98,25 +98,25 @@ body {
 
 .error-message {
     color: #e2031a;
-    font-size: 1rem; /* Usa rem para o tamanho da fonte */
-    margin-top: -0.625rem; /* Usa rem para a margem superior negativa */
-    margin-bottom: 1.25rem; /* Usa rem para a margem inferior */
+    font-size: 1rem;
+    margin-top: -0.625rem;
+    margin-bottom: 1.25rem;
 }
 
 .extras {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.25rem; /* Usa rem para a margem inferior */
-    font-size: 0.875rem; /* Usa rem para o tamanho da fonte */
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
 }
 
 .lembre-me {
-    font-size: 1rem; /* Usa rem para o tamanho da fonte */
+    font-size: 1rem;
 }
 
 .esqueceu-senha {
-    font-size: 1rem; /* Usa rem para o tamanho da fonte */
+    font-size: 1rem;
     color: #1a237e;
     text-decoration: none;
 }
@@ -131,8 +131,8 @@ body {
     background-color: #1a237e;
     color: white;
     border: none;
-    border-radius: 0.3125rem; /* Usa rem para o raio da borda */
-    font-size: 1.125rem; /* Usa rem para o tamanho da fonte */
+    border-radius: 0.3125rem;
+    font-size: 1.125rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -152,122 +152,52 @@ body {
     }
 }
 
-/* Consultas de mídia para diferentes tamanhos de tela */
-
-/* Telas menores (ex: smartphones) */
-@media (max-width: 576px) {
-    .tudoo {
-        padding: 1rem; /* Reduz o padding para telas menores */
-    }
-
-    .form-login {
-        width: 95%; /* Ajusta a largura para se adaptar melhor em telas pequenas */
-        padding: 1.5rem; /* Reduz o padding para telas menores */
-    }
-
+@media (max-width: 540px) {
     .form-titulo {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+        font-size: 1.5rem;
     }
-
-    .Botao-Google {
-        font-size: 1rem; /* Ajusta o tamanho da fonte do botão */
-        padding: 0.5rem; /* Ajusta o padding do botão */
-    }
-
-    .Google-Imagem {
-        width: 1rem; /* Ajusta o tamanho da imagem */
-        margin-right: 0.5rem; /* Ajusta a margem direita */
-    }
-
-    .form-username,
-    .form-password {
-        padding: 0.5rem 1rem; /* Ajusta o padding dos campos de entrada */
-        font-size: 0.875rem; /* Reduz o tamanho da fonte */
-    }
-
-    .error-message {
-        font-size: 0.875rem; /* Reduz o tamanho da fonte da mensagem de erro */
-    }
-
-    .extras {
-        flex-direction: column; /* Empilha verticalmente os itens extras */
-        font-size: 0.875rem; /* Reduz o tamanho da fonte */
-    }
-
-    .form-submit {
-        font-size: 1rem; /* Ajusta o tamanho da fonte do botão de envio */
-        padding: 0.5rem; /* Ajusta o padding do botão de envio */
+    .Botao-Google, .form-submit {
+        font-size: 1rem;
+        padding: 0.5rem;
     }
 }
 
-/* Telas médias (ex: tablets) */
-@media (min-width: 577px) and (max-width: 768px) {
-    .form-login {
-        width: 80%; /* Ajusta a largura da forma */
-        padding: 1.75rem; /* Ajusta o padding */
-    }
-
+@media (min-width: 541px) and (max-width: 767px) {
     .form-titulo {
-        font-size: 1.75rem; /* Ajusta o tamanho da fonte do título */
+        font-size: 1.6rem;
     }
-
-    .Botao-Google {
-        font-size: 1.125rem; /* Ajusta o tamanho da fonte do botão */
-        padding: 0.75rem; /* Ajusta o padding do botão */
-    }
-
-    .form-username,
-    .form-password {
-        padding: 0.75rem 1.25rem; /* Ajusta o padding dos campos de entrada */
-        font-size: 1rem; /* Ajusta o tamanho da fonte */
-    }
-
-    .error-message {
-        font-size: 1rem; /* Ajusta o tamanho da fonte da mensagem de erro */
-    }
-
-    .extras {
-        font-size: 0.875rem; /* Ajusta o tamanho da fonte */
-    }
-
-    .form-submit {
-        font-size: 1.125rem; /* Ajusta o tamanho da fonte do botão de envio */
-        padding: 0.75rem; /* Ajusta o padding do botão de envio */
+    .Botao-Google, .form-submit {
+        font-size: 1.05rem;
+        padding: 0.6rem;
     }
 }
 
-/* Telas grandes (ex: desktops) */
-@media (min-width: 769px) {
-    .form-login {
-        width: 50%; /* Ajusta a largura da forma */
-        padding: 2rem; /* Ajusta o padding */
-    }
-
+@media (min-width: 768px) and (max-width: 1024px) {
     .form-titulo {
-        font-size: 1.75rem; /* Ajusta o tamanho da fonte do título */
+        font-size: 1.7rem;
     }
-
-    .Botao-Google {
-        font-size: 1.125rem; /* Ajusta o tamanho da fonte do botão */
-        padding: 0.75rem; /* Ajusta o padding do botão */
+    .Botao-Google, .form-submit {
+        font-size: 1.1rem;
+        padding: 0.7rem;
     }
+}
 
-    .form-username,
-    .form-password {
-        padding: 0.75rem 1.5rem; /* Ajusta o padding dos campos de entrada */
-        font-size: 1rem; /* Ajusta o tamanho da fonte */
+@media (min-width: 1025px) and (max-width: 1540px) {
+    .form-titulo {
+        font-size: 1.75rem;
     }
-
-    .error-message {
-        font-size: 1rem; /* Ajusta o tamanho da fonte da mensagem de erro */
+    .Botao-Google, .form-submit {
+        font-size: 1.125rem;
+        padding: 0.75rem;
     }
+}
 
-    .extras {
-        font-size: 1rem; /* Ajusta o tamanho da fonte */
+@media (min-width: 1541px) {
+    .form-titulo {
+        font-size: 2rem;
     }
-
-    .form-submit {
-        font-size: 1.125rem; /* Ajusta o tamanho da fonte do botão de envio */
-        padding: 0.75rem; /* Ajusta o padding do botão de envio */
+    .Botao-Google, .form-submit {
+        font-size: 1.2rem;
+        padding: 0.8rem;
     }
 }

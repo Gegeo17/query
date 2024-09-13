@@ -75,8 +75,9 @@ body {
 
 .password-toggle2 {
     position: absolute;
-    right: 5%; /* Ajusta a posição horizontal para telas menores */
-    top: 60%; /* Ajusta a posição vertical */
+    right: 1rem; /* Ajusta a posição horizontal */
+    top: 50%; /* Ajusta a posição vertical */
+    transform: translateY(-50%);
     cursor: pointer;
 }
 
@@ -91,97 +92,116 @@ body {
     }
 }
 
-/* Media queries para telas menores */
-@media (max-width: 768px) {
+/* Media Queries para Responsividade */
+
+/* Mobile (até 540px) */
+@media (max-width: 540px) {
     .form-cadastro {
-        width: 90%; /* Ajusta a largura do formulário */
-        padding: 2rem; /* Reduz o padding */
-        margin: 2rem auto; /* Ajusta a margem */
+        width: 100%; /* Ajusta a largura para a tela inteira */
+        padding: 1.5rem; /* Reduz o padding interno */
+        margin: 1.5rem auto; /* Ajusta a margem usando rem */
     }
 
     .titulo-cadastro {
-        font-size: 1.5rem; /* Ajusta o tamanho da fonte */
-        margin-bottom: 1.5rem; /* Ajusta a margem inferior */
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+        margin-bottom: 1.5rem; /* Ajusta a margem inferior do título */
     }
 
     .form-item {
-        padding: 0.75rem; /* Reduz o padding */
-        font-size: 0.875rem; /* Ajusta o tamanho da fonte */
+        width: 100%; /* Ajusta a largura dos itens para ocupar toda a largura disponível */
+        font-size: 0.875rem; /* Reduz o tamanho da fonte dos itens */
+        padding: 0.75rem; /* Ajusta o padding dos itens */
     }
 
     .form-submit-cadastro {
-        padding: 0.75rem; /* Reduz o padding */
-        font-size: 1rem; /* Ajusta o tamanho da fonte */
-    }
-
-    .error-message, .success-message {
-        font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+        font-size: 1rem; /* Reduz o tamanho da fonte do botão de envio */
+        padding: 0.75rem; /* Ajusta o padding do botão de envio */
     }
 
     .password-toggle2 {
-        right: 3%; /* Ajusta a posição horizontal */
-        top: 55%; /* Ajusta a posição vertical */
+        right: 0.5rem; /* Ajusta a posição horizontal para telas pequenas */
     }
 }
 
-@media (max-width: 480px) {
+/* Entre 541px e 767px */
+@media (min-width: 541px) and (max-width: 767px) {
     .form-cadastro {
-        padding: 1.5rem; /* Reduz o padding */
-        margin: 1.5rem auto; /* Ajusta a margem */
+        width: 95%; /* Ajusta a largura para a tela de dispositivos intermediários */
+        padding: 2rem; /* Ajusta o padding interno */
+        margin: 2rem auto; /* Ajusta a margem usando rem */
     }
 
     .titulo-cadastro {
-        font-size: 1.25rem; /* Ajusta o tamanho da fonte */
-        margin-bottom: 1.25rem; /* Ajusta a margem inferior */
+        font-size: 1.75rem; /* Ajusta o tamanho da fonte do título */
+        margin-bottom: 1.75rem; /* Ajusta a margem inferior do título */
     }
 
     .form-item {
-        padding: 0.5rem; /* Reduz o padding */
-        font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+        width: 100%; /* Ajusta a largura dos itens para ocupar toda a largura disponível */
+        font-size: 0.9375rem; /* Ajusta o tamanho da fonte dos itens */
+        padding: 0.875rem; /* Ajusta o padding dos itens */
     }
 
     .form-submit-cadastro {
-        padding: 0.5rem; /* Reduz o padding */
-        font-size: 0.875rem; /* Ajusta o tamanho da fonte */
-    }
-
-    .error-message, .success-message {
-        font-size: 0.625rem; /* Ajusta o tamanho da fonte */
+        font-size: 1.125rem; /* Ajusta o tamanho da fonte do botão de envio */
+        padding: 0.875rem; /* Ajusta o padding do botão de envio */
     }
 
     .password-toggle2 {
-        right: 2%; /* Ajusta a posição horizontal */
-        top: 50%; /* Ajusta a posição vertical */
+        right: 1rem; /* Ajusta a posição horizontal */
     }
 }
 
-@media (max-width: 380px) {
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .form-cadastro {
-        padding: 1rem; /* Reduz o padding */
-        width: 95%; /* Ajusta a largura para garantir que o formulário se ajuste na tela */
+        width: 85%; /* Ajusta a largura do formulário para telas de tablet */
+        padding: 2.5rem; /* Padding interno do formulário */
     }
 
     .titulo-cadastro {
-        font-size: 1rem; /* Ajusta o tamanho da fonte */
-        margin-bottom: 1rem; /* Ajusta a margem inferior */
+        font-size: 1.875rem; /* Ajusta o tamanho da fonte do título */
+        margin-bottom: 1.875rem; /* Ajusta a margem inferior do título */
     }
 
     .form-item {
-        padding: 0.5rem; /* Reduz o padding */
-        font-size: 0.625rem; /* Ajusta o tamanho da fonte */
+        font-size: 1rem; /* Tamanho da fonte dos itens */
+        padding: 1rem; /* Padding dos itens */
     }
 
     .form-submit-cadastro {
-        padding: 0.5rem; /* Reduz o padding */
-        font-size: 0.75rem; /* Ajusta o tamanho da fonte */
-    }
-
-    .error-message, .success-message {
-        font-size: 0.5rem; /* Ajusta o tamanho da fonte */
+        font-size: 1.125rem; /* Tamanho da fonte do botão de envio */
+        padding: 1rem; /* Padding do botão de envio */
     }
 
     .password-toggle2 {
-        right: 1%; /* Ajusta a posição horizontal */
-        top: 45%; /* Ajusta a posição vertical */
+        right: 1.5rem; /* Ajusta a posição horizontal */
+    }
+}
+
+/* Desktops (1025px em diante) */
+@media (min-width: 1025px) {
+    .form-cadastro {
+        width: 40%; /* Ajusta a largura do formulário para telas grandes */
+        padding: 2.5rem; /* Padding interno do formulário */
+    }
+
+    .titulo-cadastro {
+        font-size: 1.875rem; /* Tamanho da fonte do título */
+        margin-bottom: 1.875rem; /* Margem inferior do título */
+    }
+
+    .form-item {
+        font-size: 1rem; /* Tamanho da fonte dos itens */
+        padding: 1rem; /* Padding dos itens */
+    }
+
+    .form-submit-cadastro {
+        font-size: 1.125rem; /* Tamanho da fonte do botão de envio */
+        padding: 1rem; /* Padding do botão de envio */
+    }
+
+    .password-toggle2 {
+        right: 2rem; /* Ajusta a posição horizontal para telas grandes */
     }
 }
